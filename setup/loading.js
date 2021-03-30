@@ -1302,6 +1302,12 @@ const transitions = [
   { from: 21, to: 24, time: 1617013305911, endTime: 1617013375678, id: 209 }
 ]
 
+async function wait(timeout = 200){
+  return new Promise((resolve, reject) => {
+    setTimeout(()=>resolve(), timeout);
+  })
+}
+
 async function loadData() {
   // 'name' is the partition key we assume for our data
   const createStateQuery = `g.addV('state').property('name', 'state').property('id',id).property('label',label).property('capacity',capacity)`
@@ -1315,6 +1321,8 @@ async function loadData() {
   const createTransitionQuery = `g.V(['state',source]).addE('transition').to(g.V(['state',target])).
                  property('time', time).property('endTime',endTime).property('ref', ref)`
   for (let transition of transitions) {
+    // before or when you run into any limits, you can throttle the number of inserts
+    // await wait()
     await client.submit(createTransitionQuery, {
       source: String(transition.from),
       target: String(transition.to),
@@ -1334,7 +1342,7 @@ async function queryData() {
 
 client
   .open()
-  .then(queryData)
+  .then(loadData)
   .catch(err => {
     console.error('Error running query...')
     console.error(err)
