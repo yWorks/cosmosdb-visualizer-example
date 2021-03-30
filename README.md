@@ -1,6 +1,6 @@
 # Using Cosmos DB to visually analyze process networks
 
-![A screenshot showing the process mining sample application](./screenshot.webp)
+[![A screenshot showing the process mining sample application](./screenshot.webp)](https://live.yworks.com/demos/complete/processmining/)
 
 This repository contains the sources for a sample application for a yFiles use case about
 connecting to and visualizing the contents of an Azure Cosmos DB.
@@ -103,4 +103,4 @@ A second fetch will collect all the transitions of items between the states reco
 the graph database. The app adds edge visualizations for all possible transitions and then animates the state
 transitions over a given period of time, showing how the load distributes among the states in a heat map.  
 
-###Happy diagramming with [yFiles](https://yworks.com/yfiles)! 
+Enjoy diagramming with [yFiles](https://yworks.com/yfiles)! 
