@@ -9,6 +9,7 @@ connecting to and visualizing the contents of an Azure Cosmos DB.
 
 - [Try the app online](https://live.yworks.com/demos/complete/processmining/) - the original demo
 - [Learn more about yFiles](https://www.yworks.com/products/yfiles), the software library for visualizing, editing, and analyzing graphs
+- [yFiles and CosmosDB](https://www.yworks.com/pages/visualizing-a-microsoft-azure-cosmos-db), more information about visualizing Cosmos DB graphs with yFiles
 
 If you have any questions or suggestions, send an email to [consulting@yworks.com](mailto:consulting@yworks.com)
 or call [+49 7071 9709050](tel:+4970719709050).
